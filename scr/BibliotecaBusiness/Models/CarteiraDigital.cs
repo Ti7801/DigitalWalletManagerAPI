@@ -8,5 +8,9 @@ namespace BibliotecaBusiness.Models
 {
     public class CarteiraDigital
     {
+        public Guid Id { get; set; }
+        public decimal Saldo { get; set; }
+        public Guid UsuarioId { get; set; } 
+
     }
 }

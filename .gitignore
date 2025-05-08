@@ -4,6 +4,7 @@ obj/
 out/
 [Dd]ebug*/
 [Rr]elease*/
+.vs/
 
 ## User-specific files
 *.user
