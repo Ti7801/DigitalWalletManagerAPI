@@ -1,0 +1,79 @@
+## Build results
+bin/
+obj/
+out/
+[Dd]ebug*/
+[Rr]elease*/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vsp
+
+## Rider/JetBrains
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+
+## Logs
+*.log
+
+## ASP.NET Core Secret Manager
+secrets.json
+
+## DotNet-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.dbmdl
+*.bak
+*.backup
+*.cache
+*.pidb
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+**/packages/*
+
+## Entity Framework
+Migrations/
+
+## Docker
+**/*.tgz
+*.dockerfile
+docker-compose.override.yml
+
+## Others
+*.vspscc
+*.vssscc
+*.pdb
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testsettings
+*.trx
