@@ -1,6 +1,16 @@
 using BibliotecaBusiness.Abstractions;
+using BibliotecaBusiness.Models;
 using BibliotecaData.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using BibliotecaBusiness.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,8 +39,60 @@ builder.Services.AddScoped<ICarteiraDigitalRepository, CarteiraDiditalRepository
 builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
 
 
+builder.Services.AddScoped<CadastrarUsuarioService>();
 
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+//Autentication - Uso da Identidade - USUARIO/PERFIL
+builder.Services.AddIdentity<Usuario, IdentityRole<Guid>>(options =>
+{
+    // Configurações a identidade para permitir espaços no UserName
+    options.User.RequireUniqueEmail = true;
+    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+~àáâãäåçèéêìíîïòóôõöùúûü ";
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 8;
+    options.Password.RequireDigit = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = true;
+})
+.AddEntityFrameworkStores<AppDbContext>()
+//.AddErrorDescriber<IdentityPortugueseErrorDescriber>()
+.AddDefaultTokenProviders(); // Para recuperação de senha e confirmação de e-mail
+
+
+////Pegando o Token e gerando a chave encodada
+//var JwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
+//builder.Services.Configure<JwtSettings>(JwtSettingsSection);
+
+//builder.Services.AddScoped<JwtGeneratorService>();
+
+//builder.Services.Configure<ApiBehaviorOptions>(options =>
+//{
+//    options.SuppressModelStateInvalidFilter = true;
+//});
+
+//var jwtSettings = JwtSettingsSection.Get<JwtSettings>();
+//var key = Encoding.ASCII.GetBytes(jwtSettings.Segredo);
+
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.RequireHttpsMetadata = true;
+//    options.SaveToken = true;
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        IssuerSigningKey = new SymmetricSecurityKey(key),
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidAudience = jwtSettings.Audiencia,
+//        ValidIssuer = jwtSettings.Emissor
+//    };
+//});
+
+
+
 
 
 
@@ -42,6 +104,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.UseHttpsRedirection();
 
