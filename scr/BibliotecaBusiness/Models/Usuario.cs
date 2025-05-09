@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaBusiness.Models
 {
-    public class CarteiraDigital
+    public class Usuario : IdentityUser<Guid>
     {
-        public Guid Id { get; set; }
-        public decimal Saldo { get; set; }      
-        public Guid UsuarioId { get; set; }  
     }
 }
