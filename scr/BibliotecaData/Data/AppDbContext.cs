@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaData.Data
 {
-    public class AppDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
+    public class AppDbContext : IdentityDbContext<Usuario, IdentityRole<Guid>, Guid>
     {
         public DbSet<CarteiraDigital> Carteiras { get; set; }
         public DbSet<Transferencia> Transferencias { get; set; }
@@ -22,7 +22,7 @@ namespace BibliotecaData.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<IdentityUser<Guid>>(entity => { entity.ToTable("Users"); });
+            modelBuilder.Entity<Usuario>(entity => { entity.ToTable("Users"); });
             modelBuilder.Entity<IdentityRole<Guid>>(entity => { entity.ToTable("Roles"); });
             modelBuilder.Entity<IdentityUserRole<Guid>>(entity => { entity.ToTable("UserRoles"); });
             modelBuilder.Entity<IdentityUserClaim<Guid>>(entity => { entity.ToTable("UserClaims"); });
