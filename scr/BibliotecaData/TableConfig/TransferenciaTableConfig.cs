@@ -18,9 +18,11 @@ namespace BibliotecaData.TableConfig
 
             builder.HasKey(transferencia => transferencia.Id);
 
-            builder.Property(carteiraDigital => carteiraDigital.CarteiraRemetenteId);
+            builder.Property(transferencia => transferencia.Data);
 
-            builder.Property(carteiraDigital => carteiraDigital.CarteiraDestinatarioId);               
+            builder.Property(transferencia => transferencia.CarteiraRemetenteId);
+
+            builder.Property(transferencia => transferencia.CarteiraDestinatarioId);               
         }
     }
 }
