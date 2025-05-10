@@ -19,7 +19,7 @@ namespace DigitalWalletManagerAPI.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(Usuario), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Usuario>> CadastrarUsuario(UsuarioDto usuarioDto)
+        public async Task<ActionResult<Guid>> CadastrarUsuario(UsuarioDto usuarioDto)
         {
             if (!ModelState.IsValid)
             {
@@ -48,7 +48,7 @@ namespace DigitalWalletManagerAPI.Controllers
                 }));
             }
           
-            return CreatedAtAction(nameof(CadastrarUsuario), usuario);
+            return CreatedAtAction(nameof(CadastrarUsuario), usuario.Id);
         }
     }
 }
