@@ -7,10 +7,20 @@
       "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DE45E9-5AE6-41AA-BAD0-2CA5709E894E}|..\\BibliotecaBusiness\\BibliotecaBusiness.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecabusiness\\services\\cadastrarusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\digitalwalletmanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DE45E9-5AE6-41AA-BAD0-2CA5709E894E}|..\\BibliotecaBusiness\\BibliotecaBusiness.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecabusiness\\services\\serviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32E8F4C8-65EF-437D-995F-3D603F5B2EC3}|..\\BibliotecaData\\BibliotecaData.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecadata\\tableconfig\\transferenciatableconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DE45E9-5AE6-41AA-BAD0-2CA5709E894E}|..\\BibliotecaBusiness\\BibliotecaBusiness.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecabusiness\\models\\carteiradigital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32E8F4C8-65EF-437D-995F-3D603F5B2EC3}|..\\BibliotecaData\\BibliotecaData.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecadata\\tableconfig\\carteiradigitaltableconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DE45E9-5AE6-41AA-BAD0-2CA5709E894E}|..\\BibliotecaBusiness\\BibliotecaBusiness.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\bibliotecabusiness\\models\\transferencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,32 +40,75 @@
         },
         {
           "DockedHeight": 72,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceResult.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Services\\ServiceResult.cs",
-              "RelativeDocumentMoniker": "..\\BibliotecaBusiness\\Services\\ServiceResult.cs",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Services\\ServiceResult.cs",
-              "RelativeToolTip": "..\\BibliotecaBusiness\\Services\\ServiceResult.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAA2wBAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T21:42:35.67Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CadastrarUsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Services\\CadastrarUsuarioService.cs",
-              "RelativeDocumentMoniker": "..\\BibliotecaBusiness\\Services\\CadastrarUsuarioService.cs",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Services\\CadastrarUsuarioService.cs",
-              "RelativeToolTip": "..\\BibliotecaBusiness\\Services\\CadastrarUsuarioService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAywCYAAAAUAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T21:26:43.012Z",
+              "WhenOpened": "2025-05-10T01:44:54.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CarteiraDigitalTableConfig.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaData\\TableConfig\\CarteiraDigitalTableConfig.cs",
+              "RelativeDocumentMoniker": "..\\BibliotecaData\\TableConfig\\CarteiraDigitalTableConfig.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaData\\TableConfig\\CarteiraDigitalTableConfig.cs",
+              "RelativeToolTip": "..\\BibliotecaData\\TableConfig\\CarteiraDigitalTableConfig.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T01:41:06.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarteiraDigital.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Models\\CarteiraDigital.cs",
+              "RelativeDocumentMoniker": "..\\BibliotecaBusiness\\Models\\CarteiraDigital.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Models\\CarteiraDigital.cs",
+              "RelativeToolTip": "..\\BibliotecaBusiness\\Models\\CarteiraDigital.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T01:40:06.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransferenciaTableConfig.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaData\\TableConfig\\TransferenciaTableConfig.cs",
+              "RelativeDocumentMoniker": "..\\BibliotecaData\\TableConfig\\TransferenciaTableConfig.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaData\\TableConfig\\TransferenciaTableConfig.cs",
+              "RelativeToolTip": "..\\BibliotecaData\\TableConfig\\TransferenciaTableConfig.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T01:39:24.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Transferencia.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Models\\Transferencia.cs",
+              "RelativeDocumentMoniker": "..\\BibliotecaBusiness\\Models\\Transferencia.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\BibliotecaBusiness\\Models\\Transferencia.cs",
+              "RelativeToolTip": "..\\BibliotecaBusiness\\Models\\Transferencia.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T01:38:47.847Z",
               "EditorCaption": ""
             },
             {
@@ -66,9 +119,9 @@
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBoAAAAAAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABUAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T13:50:41.517Z",
+              "WhenOpened": "2025-05-10T01:13:17.375Z",
               "EditorCaption": ""
             }
           ]
