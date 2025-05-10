@@ -9,7 +9,8 @@ namespace BibliotecaBusiness.Models
     public class Transferencia
     {
         public Guid Id { get; set; }
+        public DateTime Data { get; set; }
         public Guid CarteiraRemetenteId { get; set; }
-        public Guid CarteiraDestinatarioId { get; set; }
+        public Guid CarteiraDestinatarioId { get; set; }     
     }
 }
