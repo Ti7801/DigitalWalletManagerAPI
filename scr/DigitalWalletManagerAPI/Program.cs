@@ -38,9 +38,13 @@ builder.Services.AddScoped<CadastrarUsuarioService>();
 builder.Services.AddScoped<ICarteiraDigitalRepository, CarteiraDiditalRepository>();
 builder.Services.AddScoped<CriarCarteiraDigitalService>();
 builder.Services.AddScoped<ConsultarSaldoDaCarteiraService>();
+builder.Services.AddScoped<AtualizarSaldoCarteiraService>();
+
 
 
 builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
+builder.Services.AddScoped<CriarTransferenciaService>();
+builder.Services.AddScoped<ConsultarTransferenciasServices>();
 
 
 //Autentication - Uso da Identidade - USUARIO/PERFIL
