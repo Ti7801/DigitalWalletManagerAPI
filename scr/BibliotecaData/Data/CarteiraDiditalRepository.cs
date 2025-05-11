@@ -19,13 +19,13 @@ namespace BibliotecaData.Data
             _appDbContext = appDbContext;
         }
 
-        public async Task AdicionarCarteiraDigital(CarteiraDigital carteira)
+        public async Task AdicionarCarteiraDigitalAsync(CarteiraDigital carteira)
         {
             _appDbContext.Carteiras.Add(carteira);  
             await _appDbContext.SaveChangesAsync();
         }
 
-        public async Task<CarteiraDigital?> ObterCarteiraDigital(Guid usuarioId, Guid carteiraId)
+        public async Task<CarteiraDigital> ObterCarteiraDigitalAsync(Guid usuarioId, Guid carteiraId)
         {
             var listCarteira = await _appDbContext.Carteiras.Where(x => x.UsuarioId == usuarioId).ToListAsync();
 
@@ -36,25 +36,31 @@ namespace BibliotecaData.Data
                 throw new UsuarioNaoEncontradoException(message);
             }
 
-            var carteira = listCarteira.Where(x => x.Id == carteiraId).SingleOrDefault();
+            CarteiraDigital carteira = listCarteira.Where(x => x.Id == carteiraId).Single();
 
             return carteira;
         }
 
-        public async Task<CarteiraDigital?> AtualizarSaldoCarteira(Guid usuarioId, Guid carteiraId)
+        public async Task<CarteiraDigital> ObterCarteiraDigitalPorIdCarteiraAsync(Guid carteiraId)
         {
-            var carteira = await ObterCarteiraDigital(usuarioId, carteiraId);
+            var carteira = await _appDbContext.Carteiras.Where(x => x.Id == carteiraId).SingleOrDefaultAsync();
 
-            var carteiraAtualizada = new CarteiraDigital
+            if (carteira == null)
             {
-                Id = carteira.Id,
-                Saldo = carteira.Saldo,
-                UsuarioId = usuarioId  
-            };
+                const string message = "Carteiras não foram encontradas para o usuário!";
 
-            await AdicionarCarteiraDigital(carteiraAtualizada);
+                throw new UsuarioNaoEncontradoException(message);
+            }
 
-            return carteiraAtualizada;  
+            return carteira;
+        }
+
+        public async Task<CarteiraDigital> AtualizarCarteiraAsync(CarteiraDigital carteira)
+        {
+             _appDbContext.Update(carteira);
+             await _appDbContext.SaveChangesAsync();
+
+            return carteira;  
         }
     }
 }
