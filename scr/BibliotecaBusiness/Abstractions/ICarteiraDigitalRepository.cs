@@ -9,8 +9,9 @@ namespace BibliotecaBusiness.Abstractions
 {
     public interface ICarteiraDigitalRepository
     {
-        Task AdicionarCarteiraDigital(CarteiraDigital carteira);
-        Task<CarteiraDigital?> ObterCarteiraDigital(Guid usuarioId, Guid carteiraId);
-        Task<CarteiraDigital?> AtualizarSaldoCarteira(Guid usuarioId, Guid carteiraId);
+        Task AdicionarCarteiraDigitalAsync(CarteiraDigital carteira);
+        Task<CarteiraDigital> ObterCarteiraDigitalAsync(Guid usuarioId, Guid carteiraId);
+        Task<CarteiraDigital> ObterCarteiraDigitalPorIdCarteiraAsync(Guid carteiraId);
+        Task<CarteiraDigital> AtualizarCarteiraAsync(CarteiraDigital carteira);
     }
 }
