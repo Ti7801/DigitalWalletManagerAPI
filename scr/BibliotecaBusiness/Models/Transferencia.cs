@@ -10,6 +10,7 @@ namespace BibliotecaBusiness.Models
     {
         public Guid Id { get; set; }
         public DateTime Data { get; set; }
+        public decimal Valor { get; set; }
         public Guid CarteiraRemetenteId { get; set; }
         public Guid CarteiraDestinatarioId { get; set; }     
     }
