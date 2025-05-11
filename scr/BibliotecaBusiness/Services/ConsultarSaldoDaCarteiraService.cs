@@ -29,7 +29,7 @@ namespace BibliotecaBusiness.Services
             try 
             {
                 serviceResult.Sucess = true;
-                var carteira = await _carteiraDigitalRepository.ObterCarteiraDigital(usuarioId, carteiraId);
+                var carteira = await _carteiraDigitalRepository.ObterCarteiraDigitalAsync(usuarioId, carteiraId);
                 serviceResult.Value = carteira;
 
                 return serviceResult;
