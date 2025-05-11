@@ -28,7 +28,7 @@ namespace BibliotecaBusiness.Services
             try
             {
                 serviceResult.Success = true;
-                await _carteiraDigitalRepository.AdicionarCarteiraDigital(carteira);
+                await _carteiraDigitalRepository.AdicionarCarteiraDigitalAsync(carteira);
             }
             catch (Exception ex)
             {
