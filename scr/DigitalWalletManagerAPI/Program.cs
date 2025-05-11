@@ -32,14 +32,15 @@ builder.Services.AddDbContext<AppDbContext>(
     ServiceLifetime.Scoped
 );
 
-builder.Services.AddScoped<ICarteiraDigitalRepository, CarteiraDiditalRepository>();
 
+builder.Services.AddScoped<CadastrarUsuarioService>();
+
+builder.Services.AddScoped<ICarteiraDigitalRepository, CarteiraDiditalRepository>();
+builder.Services.AddScoped<CriarCarteiraDigitalService>();
+builder.Services.AddScoped<ConsultarSaldoDaCarteiraService>();
 
 
 builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
-
-
-builder.Services.AddScoped<CadastrarUsuarioService>();
 
 
 //Autentication - Uso da Identidade - USUARIO/PERFIL
@@ -57,43 +58,6 @@ builder.Services.AddIdentity<Usuario, IdentityRole<Guid>>(options =>
 .AddEntityFrameworkStores<AppDbContext>()
 //.AddErrorDescriber<IdentityPortugueseErrorDescriber>()
 .AddDefaultTokenProviders(); // Para recuperação de senha e confirmação de e-mail
-
-
-////Pegando o Token e gerando a chave encodada
-//var JwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
-//builder.Services.Configure<JwtSettings>(JwtSettingsSection);
-
-//builder.Services.AddScoped<JwtGeneratorService>();
-
-//builder.Services.Configure<ApiBehaviorOptions>(options =>
-//{
-//    options.SuppressModelStateInvalidFilter = true;
-//});
-
-//var jwtSettings = JwtSettingsSection.Get<JwtSettings>();
-//var key = Encoding.ASCII.GetBytes(jwtSettings.Segredo);
-
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//}).AddJwtBearer(options =>
-//{
-//    options.RequireHttpsMetadata = true;
-//    options.SaveToken = true;
-//    options.TokenValidationParameters = new TokenValidationParameters
-//    {
-//        IssuerSigningKey = new SymmetricSecurityKey(key),
-//        ValidateIssuer = true,
-//        ValidateAudience = true,
-//        ValidAudience = jwtSettings.Audiencia,
-//        ValidIssuer = jwtSettings.Emissor
-//    };
-//});
-
-
-
-
 
 
 var app = builder.Build();
