@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DigitalWalletManagerAPI.Controllers
 {
     [ApiController]
-    [Route("api/usuariocontroller")]
+    [Route("api/usuario")]
     public class UsuarioController : ControllerBase
     {
         private readonly CadastrarUsuarioService _cadastrarUsuarioService;  
@@ -16,7 +16,7 @@ namespace DigitalWalletManagerAPI.Controllers
             _cadastrarUsuarioService = cadastrarUsuarioService; 
         }
 
-        [HttpPost]
+        [HttpPost("cadastrar-usuario")]
         [ProducesResponseType(typeof(Usuario), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Guid>> CadastrarUsuario(UsuarioDto usuarioDto)
