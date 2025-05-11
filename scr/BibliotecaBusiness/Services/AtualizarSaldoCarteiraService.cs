@@ -21,7 +21,7 @@ namespace BibliotecaBusiness.Services
             _logger = logger;   
         }
 
-        public async Task<ServiceResult<CarteiraDigital?>> AtualizarSaldoCarteira(Guid usuarioId, Guid carteiraId)
+        public async Task<ServiceResult<CarteiraDigital?>> AtualizarSaldoCarteira(Guid usuarioId, Guid carteiraId, decimal valor)
         {
             ServiceResult<CarteiraDigital?> serviceResult = new ServiceResult<CarteiraDigital?>();
 
@@ -29,9 +29,13 @@ namespace BibliotecaBusiness.Services
             {
                 serviceResult.Sucess = true;
 
-                var carteira = await _carteiraDigitalRepository.AtualizarSaldoCarteira(usuarioId, carteiraId);
+                var carteira = await _carteiraDigitalRepository.ObterCarteiraDigitalAsync(usuarioId, carteiraId);
 
-                serviceResult.Value = carteira; 
+                carteira.Saldo += valor;
+
+                var carteiraAtualizada = await _carteiraDigitalRepository.AtualizarCarteiraAsync(carteira);
+
+                serviceResult.Value = carteiraAtualizada; 
 
                 return serviceResult;
             }
