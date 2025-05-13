@@ -10,6 +10,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using BibliotecaBusiness.Services;
+using DigitalWalletManagerAPI.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,33 @@ builder.Services.AddDbContext<AppDbContext>(
     },
     ServiceLifetime.Scoped
 );
+// *************************************************************************************
+
+//Pegando o Token e gerando a chave encodada
+var JwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
+builder.Services.Configure<JwtSettings>(JwtSettingsSection);
+
+var jwtSettings = JwtSettingsSection.Get<JwtSettings>();
+var key = Encoding.ASCII.GetBytes(jwtSettings.Segredo);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = true;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = jwtSettings.Audiencia,
+        ValidIssuer = jwtSettings.Emissor
+    };
+});
+// ***************************************************************************************
 
 
 builder.Services.AddScoped<CadastrarUsuarioService>();
@@ -45,6 +73,9 @@ builder.Services.AddScoped<AtualizarSaldoCarteiraService>();
 builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
 builder.Services.AddScoped<CriarTransferenciaService>();
 builder.Services.AddScoped<ConsultarTransferenciasServices>();
+
+builder.Services.AddScoped<JwtGeneratorService>();
+builder.Services.AddScoped<JwtSettings>();
 
 
 //Autentication - Uso da Identidade - USUARIO/PERFIL
@@ -62,6 +93,19 @@ builder.Services.AddIdentity<Usuario, IdentityRole<Guid>>(options =>
 .AddEntityFrameworkStores<AppDbContext>()
 //.AddErrorDescriber<IdentityPortugueseErrorDescriber>()
 .AddDefaultTokenProviders(); // Para recuperação de senha e confirmação de e-mail
+
+
+//*************************************************************************
+
+builder.Services.Configure<JwtSettings>(
+    builder.Configuration.GetSection("JwtSettings"));
+
+builder.Services.AddSingleton(resolver =>
+    resolver.GetRequiredService<IOptions<JwtSettings>>().Value);
+
+
+
+//*************************************************************************
 
 
 var app = builder.Build();
