@@ -148,13 +148,6 @@ O projeto foi desenvolvido com atenção especial às boas práticas de desenvol
 ---
 
 
-
-## 8. 🧾 Exemplo de Script para Popular o Banco
-
-O projeto acompanha um arquivo `.txt` com um exemplo de script para popular a base de dados com usuários, carteiras e transferências simuladas.
-
----
-
 ## 9. 🤝 Contribuição
 
 Contribuições são bem-vindas! Se você quiser reportar um bug, sugerir melhorias ou colaborar com o código, sinta-se à vontade para abrir uma _issue_ ou _pull request_.
