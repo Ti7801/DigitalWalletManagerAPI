@@ -2,11 +2,13 @@
 using BibliotecaBusiness.Exceptions;
 using BibliotecaBusiness.Models;
 using BibliotecaBusiness.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DigitalWalletManagerAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/carteira")]
     public class CarteiraDigitalController : ControllerBase

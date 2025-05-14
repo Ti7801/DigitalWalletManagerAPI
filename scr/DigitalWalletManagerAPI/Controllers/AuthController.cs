@@ -19,25 +19,21 @@ namespace DigitalWalletManagerAPI.Controllers
     {
         private readonly SignInManager<Usuario> _signInManager;
         private readonly UserManager<Usuario> _userManager;
-        private readonly JwtSettings _jwtSettings;
         private readonly ILogger<AuthController> _logger;
         private readonly JwtGeneratorService _jwtGeneratorService;
 
 
         public AuthController(SignInManager<Usuario> signInManager,
                            UserManager<Usuario> userManager,
-                           IOptions<JwtSettings> jwtSettings,
                            ILogger<AuthController> logger,
                            JwtGeneratorService jwtGeneratorService)
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            _jwtSettings = jwtSettings.Value;
             _logger = logger;
             _jwtGeneratorService = jwtGeneratorService;
         }
-
-        //[Authorize(Roles = "SuperAdmin")]
+      
         [HttpPost("registrarUsuario")]
         public async Task<ActionResult> RegistrarUsuario(RegisterUserViewModelDto registerUser)
         {
@@ -68,7 +64,6 @@ namespace DigitalWalletManagerAPI.Controllers
         }
 
 
-        //[AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult> Login(LoginUserViewModelDto loginUser)
         {
