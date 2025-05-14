@@ -7,7 +7,7 @@
 
 ```
 
-# 1. 📖 **Sobre o Projeto**
+## 1. 📖 **Sobre o Projeto**
 
 Este projeto é uma **API RESTful** desenvolvida com foco no gerenciamento de carteiras digitais. Foi construída utilizando as tecnologias **ASP.NET Core**, **Entity Framework Core** e **PostgreSQL**, com base em uma **arquitetura limpa e em 3 camadas**, seguindo os princípios do **SOLID** para garantir modularidade, manutenibilidade e escalabilidade.
 
@@ -15,7 +15,7 @@ A API permite que usuários se cadastrem, criem carteiras digitais, adicionem sa
 
 ---
 
-# 2. 🧪 Como Executar Localmente
+## 2. 🧪 Como Executar Localmente
 
 ### 2.1 - Configuração do ambiente e execução da aplicação
 
