@@ -20,7 +20,7 @@ A API permite que usuários se cadastrem, criem carteiras digitais, adicionem sa
 ### 2.1 - Configuração do ambiente e execução da aplicação
 
 ### Instale as Dependências
-1. **SQL Server**  
+1. **PostgreSQL**  
 2. **.NET 8 SDK**  
 3. **Git**  
 
