@@ -1,96 +1,19 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\digitalwalletmanagerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\digitalwalletmanagerapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\digitalwalletmanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|c:\\users\\tiago\\desktop\\projeto\\scr\\digitalwalletmanagerapi\\services\\jwtgeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C29D7D9-39F6-4B8A-BF6D-71BE3125F7B3}|DigitalWalletManagerAPI.csproj|solutionrelative:services\\jwtgeneratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 295,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-13T00:25:09.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JwtGeneratorService.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Services\\JwtGeneratorService.cs",
-              "RelativeDocumentMoniker": "Services\\JwtGeneratorService.cs",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Services\\JwtGeneratorService.cs",
-              "RelativeToolTip": "Services\\JwtGeneratorService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAwwCAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T00:07:54.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T03:04:40.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\tiago\\Desktop\\PROJETO\\scr\\DigitalWalletManagerAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAlwDMAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T03:52:51.129Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 92,
+          "DockedHeight": 247,
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             }
           ]
         }
